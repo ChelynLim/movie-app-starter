@@ -15,6 +15,12 @@ function App() {
         } else {
           setMovies([]);
         }
+        
+        //Another way to set the movies
+        // data.Response === "True" ? setMovies(data.Search) : setMovies([]);
+
+        //Another way
+        // data.Response === "True" && setMovies(data.Search);
       })
       .catch((error) => {
         console.error("Error fetching data: ", error);
@@ -26,6 +32,10 @@ function App() {
   const handleInputChange = (e) => {
     setQuery(e.target.value);
   };
+
+  //another way for the input
+  //<input type="text" placeholder="Search movies..." value = {query} 
+  //onChange={(e) => setQuery(e.target.value)} />
   
   return (
     <div>
